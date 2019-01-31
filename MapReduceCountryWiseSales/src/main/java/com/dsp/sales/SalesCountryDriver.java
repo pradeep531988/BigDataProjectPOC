@@ -10,6 +10,7 @@ import org.apache.hadoop.mapred.JobConf;
 import org.apache.hadoop.mapred.TextInputFormat;
 import org.apache.hadoop.mapred.TextOutputFormat;
 
+import com.dsp.sales.comparator.MyKeyComparator;
 import com.dsp.sales.mapper.SalesMapper;
 import com.dsp.sales.reducer.SalesCountryReducer;
 
@@ -34,6 +35,9 @@ public class SalesCountryDriver {
 		job_conf.setInputFormat(TextInputFormat.class);
 		job_conf.setOutputFormat(TextOutputFormat.class);
 
+		// Comparator
+		job_conf.setOutputKeyComparatorClass(MyKeyComparator.class);
+		
 		// Set input and output directories using command line arguments, 
 		//arg[0] = name of input directory on HDFS, and arg[1] =  name of output directory to be created to store the output file.
 		
