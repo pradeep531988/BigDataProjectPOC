@@ -1,0 +1,6 @@
+1901	317	San Francisco
+1901	250	Los Angeles
+1901	450	San Jose
+1902	346	Redwood City
+1902	389	San Jose
+1904	500	Sacramento
